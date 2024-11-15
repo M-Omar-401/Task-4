@@ -1,0 +1,796 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Desktop Styles */
+.logo {
+  display: flex;
+  grid-template-columns: 2fr;
+}
+
+.sideLogo {
+  width: 60%;
+  height: 120px;
+}
+
+.sideLogo image {
+  width: 700px;
+  height: 140px;
+}
+
+.Tfh1 {
+  text-decoration: underline rgb(7, 7, 7);
+  color: rgb(141, 16, 16);
+  margin-left: 100px;
+}
+
+.Tfh2 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-left: 100px;
+}
+
+.Tfh3 {
+  font-size: 25px;
+  margin-left: 110px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(134, 16, 16);
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sideLogo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .Tfh1,
+  .Tfh2,
+  .Tfh3 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .Tfh2 {
+    font-size: 50px;
+  }
+
+  .Tfh3 {
+    font-size: 20px;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    float: none;
+  }
+
+  .navbar li a {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .TopText {
+    padding: 10px;
+  }
+  .Tfh2 {
+    font-size: 40px;
+  }
+
+  .Tfh3 {
+    font-size: 18px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    background-color: rgb(134, 16, 16);
+  }
+
+  .navbar li a {
+    font-size: 18px;
+    padding: 8px 0;
+  }
+}
+/* Mobile Styles for Very Small Devices (e.g., iPhone SE) */
+@media (max-width: 533px) {
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sideLogo {
+    width: 80%; /* Adjust the sideLogo width for smaller screens */
+    height: auto; /* Allow the height to scale proportionally */
+    margin-bottom: 10px;
+  }
+
+  /* Target the actual image inside .sideLogo */
+  .sideLogo img {
+    width: 100%; /* Set to 100% of .sideLogo, making it responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .Tfh1,
+  .Tfh2,
+  .Tfh3 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .Tfh2 {
+    font-size: 35px; /* Smaller font size for very small screens */
+  }
+
+  .Tfh3 {
+    font-size: 16px; /* Further reduced font size */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li a {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+}
+
+/* Default Styles for Desktop */
+/* Container Styling */
+/* Container Styling */
+.topContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+  align-items: stretch; /* Ensures equal height */
+}
+
+/* Left Image Section */
+.TopLeftImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Add a background for balance */
+}
+
+.TopLeftImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the area while maintaining aspect ratio */
+}
+
+/* Right Form Section */
+.TopRight {
+  background-image: url("./Pictures/form_bg.jpg");
+  background-size: cover;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.TopRight h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.question-highlight {
+  background-color: rgb(136, 22, 22);
+  /* border: 2px solid green; */
+  color: white;
+  /* padding: 5px 10px; */
+  /* font-size: 50px; */
+  margin-right: 60px;
+}
+
+.question-text {
+  font-size: 30px;
+  color: black;
+}
+
+.highlight {
+  font-size: 50px;
+  color: rgb(40, 40, 126);
+}
+
+/* Form Description */
+.form-description {
+  font-size: 25px;
+  color: black;
+  margin-top: 10px;
+  /* border: 2px solid black; */
+  padding: 10px;
+}
+
+/* Input Fields */
+.formData {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: 2px solid black; */
+  /* gap: 10px; */
+}
+.input-group {
+  /* display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px; */
+  width: 300px;
+  height: 100px;
+  /* margin-top: 130px; */
+  text-align: start;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color:black;
+  font-weight: bold;
+}
+
+.input-group input {
+  /* width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px; */
+  width: 200px;
+  height: 20px;
+}
+.cred {
+  width: 200px;
+  height: 70px;
+  margin-top: 10px;
+  /* border: 2px solid black; */
+}
+
+/* Confidential Image */
+.confidential-image {
+  /* width: 100px;
+  transform: rotate(10deg);
+  margin: 10px 0; */
+  transform: rotate(10deg);
+  height: 60px;
+  width: 200px;
+}
+
+/* Textarea */
+.case-input {
+  width: 93%;
+  height: 60px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid black;
+  /* border-radius: 4px; */
+  resize: none;
+  margin-left: 10px;
+}
+
+/* Privacy Notice */
+.privacy-notice {
+  /* font-size: 12px;
+  color: rgb(91, 79, 79);
+  text-align: center;
+  margin-top: 10px; */
+  font-size: 20px;
+  color: rgb(91, 79, 79);
+  margin-right: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: rgb(174, 20, 20);
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+
+  /* border: 2px solid black; */
+  /* margin-left: 100px; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.bullet-icon {
+  height: 16px;
+  margin-left: 8px;
+}
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .topContent {
+    grid-template-columns: 1fr;
+  }
+
+  .TopRight h1 {
+    font-size: 20px;
+  }
+
+  .question-highlight {
+    font-size: 16px;
+  }
+
+  .question-text {
+    font-size: 15px;
+  }
+
+  .form-description,
+  .input-group label,
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .TopLeftImage img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .question-highlight {
+    font-size: 16px;
+    padding: 3px 8px;
+  }
+
+  .question-text {
+    font-size: 14px;
+  }
+
+  .TopRight p {
+    font-size: 13px;
+  }
+
+  .input-group input,
+  .case-input {
+    font-size: 13px;
+  }
+  .cred{
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+
+  .confidential-image {
+    width: 150px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Devices (Max Width 533px) */
+@media (max-width: 533px) {
+  .TopRight {
+    padding: 10px;
+    text-align: center; /* Center align for smaller screens */
+  }
+
+  .question-highlight {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .question-text {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .form-description {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column; /* Stack labels and inputs vertically */
+    align-items: center;
+    /* gap: 2px; */
+    width: 100%;
+  }
+
+  .input-group label {
+    font-size: 12px;
+    width: 90%; /* Fit input labels within the screen */
+    text-align: left; /* Align labels to the left */
+  }
+
+  .input-group input {
+    font-size: 12px;
+    width: 100%; /* Make inputs full width */
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .cred {
+    /* border: 2px solid green; */
+    margin: 10px auto; /* Center confidential image */
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  .confidential-image {
+    width: 150px; /* Smaller size for smaller screens */
+  }
+
+  .case-input {
+    width: 80%; /* Full width for the text area */
+    font-size: 12px;
+    padding: 8px;
+    /* margin-top: 10px; */
+    height: 60px; /* Adjust height for smaller screens */
+    resize: vertical; /* Allow vertical resizing only */
+  }
+
+  .privacy-notice {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .submit-button {
+    font-size: 12px;
+    padding: 8px 15px;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .bullet-icon {
+    width: 10px; /* Adjust icon size */
+    height: auto;
+  }
+}
+
+
+/* Base layout for large screens */
+.middleContent {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.md1, .md2, .md3 {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 300px;
+}
+
+.md2 {
+  border-right: 1px solid rgb(86, 83, 83);
+  border-left: 1px solid rgb(86, 83, 83);
+}
+
+.md1Content {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+
+/* Screen size 1024px */
+@media (max-width: 1024px) {
+  .middleContent {
+    flex-wrap: wrap;
+  }
+  
+  .md1, .md2, .md3 {
+    width: 48%;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+
+  /* button {
+    margin: 10px auto;
+    display: block;
+  } */
+}
+
+/* Screen size 786px */
+@media (max-width: 848px) {
+  .middleContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .md1, .md2, .md3 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+    .md1{
+    /* border: 3px solid green; */
+    display: grid;
+
+   }
+   .md1Content{
+   /* border: 2px solid pink; */
+   }
+   .md1Content p{
+    font-size: 50px;
+    color:black;
+   }
+   .md1Image{
+    border: 3px solid gray;
+   }
+  
+}
+
+/* Screen size 533px */
+@media (max-width: 533px) {
+  .middleContent {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .md1, .md2, .md3 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .md1Content, .md2, .md3 {
+    text-align: center;
+  }
+
+  /* .md1Pic, .md2 img, .md3 img {
+    margin: 10px auto;
+    width: 90%;
+    height: auto;
+  } */
+
+  h1, h2, h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  /* button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  } */
+}
+
+
+
+
+
+
+/* General styling for desktop screens (default) */
+.bottomContent {
+  display: flex;
+  flex-direction: row;
+  height: auto; /* Adjust height dynamically */
+}
+.first,
+.third {
+  width: 25%;
+  margin-top: 50px;
+}
+.second {
+  /* border: 2px solid black; */
+  width: 100%; /* Full width for container */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding/border in width */
+  overflow-wrap: break-word; /* Ensure long words wrap */
+}
+
+.second div {
+  width: 100%; /* Ensure inner content takes full width */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; /* Allow text to wrap */
+}
+
+.sidebarDiv {
+  /* border: 2px solid goldenrod; */
+  width: 250px;
+  /* margin-left: 30px; */
+  margin: 20px;
+}
+.innerDiv {
+  border-top: 1px solid rgb(95, 89, 89);
+  margin-top: 10px;
+}
+.innerDiv button {
+  height: 30px;
+  width: 100px;
+  margin-left: 100px;
+}
+.div3 {
+  margin-left: 55px;
+}
+
+.headingDark {
+  color: rgb(52, 46, 46);
+}
+.HeadingRed {
+  color: rgb(174, 20, 20);
+}
+.sideBarBtn {
+  background-color: rgb(174, 20, 20);
+  border-color: rgb(174, 20, 20);
+  color: white;
+}
+.third{
+  margin-top: 100px;
+}
+
+
+/* For screens 1024px and below */
+@media screen and (max-width: 1024px) {
+  .bottomContent {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of content */
+    flex-direction: row; /* Keep content in rows */
+    justify-content: space-between; /* Distribute items evenly */
+  }
+
+  .first,
+  .second {
+    /* border: 2px solid greenyellow; */
+    width: 50%; /* Each div takes 50% of the screen */
+    margin: 0; /* Remove margins to fit neatly */
+    box-sizing: border-box; /* Include padding/borders in width calculation */
+    text-align: center;
+    padding: 20px;
+  }
+  .first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  .third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width below first and second */
+    margin-top: 10px;
+  }
+
+  /* Optional: Ensure text wraps properly in smaller screens */
+  .second {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* Ensure text can wrap */
+  }
+}
+
+
+
+/* For screens 786px and below */
+@media screen and (max-width: 786px) {
+  .bottomContent {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .first,
+  .second,
+  .third {
+    width: 100%; /* Full width */
+    margin: 10px 0;
+    text-align: center; /* Center align content */
+  }
+
+  .sidebarDiv {
+    width: 95%; /* Slightly smaller for very small screens */
+    margin: 5px auto; /* Reduce margin */
+  }
+
+  .innerDiv button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Center align buttons */
+  }
+}
+
+/* For screens 533px and below */
+@media screen and (max-width: 533px) {
+  .bottomContent {
+    flex-direction: column;
+    align-items: center; /* Center all content */
+  }
+
+  .first,
+  .second,
+  .third {
+    width: 90%; /* Center all divs and reduce width */
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .sidebarDiv {
+    width: 90%; /* Adjust for small screens */
+    margin: 5px auto;
+  }
+
+  .innerDiv button {
+    width: 80%; /* Adjust button size */
+    margin: 10px auto; /* Center buttons */
+    display: block;
+  }
+
+  img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+  }
+
+  .second {
+    word-wrap: break-word; /* Break long text properly */
+  }
+
+  h1, h2, h3, p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+ 
+}
